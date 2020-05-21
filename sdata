@@ -67,7 +67,7 @@ class Sdata
 			);
 		    curl_setopt($ch[$i], CURLOPT_URL, $url[$i]['url']);
 			if($custom[$i]['gzip']){
-				curl_setopt($ch[$i], CURLOPT_ENCODING , "gzip, deflate");
+				curl_setopt($ch[$i], CURLOPT_ENCODING , "gzip, deflate"); # for amz
 			}
 		    curl_setopt($ch[$i], CURLOPT_HEADER, false);
       		curl_setopt($ch[$i], CURLOPT_COOKIEFILE, $cookies);
