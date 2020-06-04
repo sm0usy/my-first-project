@@ -69,8 +69,9 @@ class Sdata
 			if($custom[$i]['gzip']){
 				curl_setopt($ch[$i], CURLOPT_ENCODING , $custom[$i]['gzip']); # for amz
 			}
-		    curl_setopt($ch[$i], CURLOPT_HEADER, true);
+		    curl_setopt($ch[$i], CURLOPT_HEADER, false);
       		    curl_setopt($ch[$i], CURLOPT_COOKIEFILE, $cookies);
+      		    curl_setopt($ch[$i], CURLOPT_COOKIEJAR, $cookies);
 		    if($custom[$i]['rto']){
 		    	curl_setopt($ch[$i], CURLOPT_TIMEOUT, $custom[$i]['rto']);
 		    }else{
