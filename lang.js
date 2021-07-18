@@ -1,0 +1,1 @@
+define(["jquery","lib/jquery.cookie"],function(e){"use strict";function n(n){e.cookie("language",n,{path:"/"});var i=e("link[hreflang="+n+"]").attr("href");i?window.location=i:window.location.reload(!0)}return{changeSiteLanguage:n}});
